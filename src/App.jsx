@@ -1,12 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
+
 import './App.css'
+
+import MetaTags from './MetaTags.jsx'
+import Header from './Header.jsx'
+import Nav from './Nav.jsx'
+import Body from './Body.jsx'
+import Footer from './Footer.jsx'
 
 function App() {
   return (
     <>
-      <h1>Testing</h1>
+      <MetaTags />
+      <Header />
+      <Nav />
+      <Body />
+      <Footer />
     </>
   )
 }
