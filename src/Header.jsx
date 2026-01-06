@@ -1,6 +1,7 @@
 import LittleLemonLogo from '../src/assets/Logo.png'
-import Nav from './Nav'
 import styles from './Header.module.css'
+
+import Nav from './Nav'
 
 function Header() {
     return (

@@ -7,35 +7,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 60px; /* Space between logo and nav */
     background-color: #fff;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Content-box, width and height include only the content, padding and border are excluded */
 }
 
 .logo {
     height: auto;
-    max-height: 60px; /* Adjust based on your logo size */
+    max-height: 60px;
     width: auto;
     flex-shrink: 0;
 }
 
 @media (max-width: 1440px) {
     .header {
-        padding: 0 40px; /* Reduced padding for smaller screens */
+        padding: 0 40px;
         gap: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-        height: auto;
-        min-height: 80px;
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .logo {
-        max-height: 40px;
     }
 }
