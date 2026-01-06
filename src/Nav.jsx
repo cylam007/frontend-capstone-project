@@ -1,12 +1,16 @@
+import styles from './Nav.module.css'
+
 function Nav() {
     return (
-        <nav>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/reservations">Reservations</a></li>
-            <li><a href="/order-online">Order Online</a></li>
-            <li><a href="/login">Login</a></li>
+        <nav className={styles.nav}>
+            <ul className={styles.navList}>
+                <li><a href="/" className={styles.navLink}>Home</a></li>
+                <li><a href="/about" className={styles.navLink}>About</a></li>
+                <li><a href="/menu" className={styles.navLink}>Menu</a></li>
+                <li><a href="/reservations" className={styles.navLink}>Reservations</a></li>
+                <li><a href="/order-online" className={styles.navLink}>Order Online</a></li>
+                <li><a href="/login" className={styles.navLink}>Login</a></li>
+            </ul>
         </nav>
     )
 }
