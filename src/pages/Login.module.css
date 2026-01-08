@@ -1,0 +1,264 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #495e57 0%, #3a4d47 100%);
+  font-family: 'Karla', sans-serif;
+}
+
+.loginCard {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 48px;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-family: 'Markazi Text', serif;
+  font-size: 36px;
+  color: #495e57;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.form {
+  margin-bottom: 24px;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #495e57;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #f4ce14;
+  box-shadow: 0 0 0 3px rgba(244, 206, 20, 0.1);
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #495e57;
+}
+
+.checkbox {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkboxText {
+  user-select: none;
+}
+
+.forgotLink {
+  color: #f4ce14;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.forgotLink:hover {
+  color: #e6b800;
+  text-decoration: underline;
+}
+
+.buttonContainer {
+  margin-bottom: 24px;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e8e8e8;
+}
+
+.dividerText {
+  background: #fff;
+  padding: 0 16px;
+  color: #999;
+  font-size: 14px;
+}
+
+.socialLogin {
+  margin-bottom: 24px;
+}
+
+.socialButton {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fff;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #495e57;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.socialButton:hover {
+  border-color: #f4ce14;
+  background: #fefefe;
+}
+
+.socialButton:focus {
+  outline: 2px solid #f4ce14;
+  outline-offset: 2px;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fff;
+  font-size: 12px;
+}
+
+.socialButton:nth-child(1) .socialIcon {
+  background: #4285f4;
+}
+
+.socialButton:nth-child(2) .socialIcon {
+  background: #1877f2;
+}
+
+.footer {
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 24px;
+}
+
+.toggleText {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 16px 0;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: #f4ce14;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.toggleButton:hover {
+  color: #e6b800;
+}
+
+.homeLink {
+  margin: 0;
+}
+
+.backLink {
+  color: #495e57;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.backLink:hover {
+  color: #f4ce14;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+    min-height: 100vh;
+  }
+  
+  .loginCard {
+    padding: 32px 24px;
+    border-radius: 12px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .formOptions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,117 @@
+
+.aboutMeSection {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #495e57;
+  overflow: visible;
+  box-sizing: border-box;
+  scroll-margin-top: 80px; /* For smooth scrolling with fixed header */
+}
+
+/* Semantic wrapper for image */
+.aboutMeImageWrapper {
+  margin: 0;
+}
+
+/* Focus states for accessibility */
+.aboutMeBox:focus-within {
+  outline: 2px solid #f4ce14;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+@media (max-width: 900px) {
+  .aboutMeSection {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .aboutMeBox {
+    padding: 32px 16px 0 16px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .aboutMePhoto {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 24px auto 0 auto;
+    display: block;
+    right: unset;
+    bottom: unset;
+  }
+}
+
+
+.aboutMeBox {
+  background: none;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.aboutMeTitle {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  color: #f4ce14;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.aboutMeSubtitle {
+  font-family: 'Markazi Text', serif;
+  font-size: 40px;
+  color: #fff;
+  margin: 8px 0 0 0;
+  line-height: 1.1;
+}
+
+.aboutMeDesc {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin: 18px 0 32px 0;
+  max-width: 500px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+
+.aboutMePhoto {
+  position: absolute;
+  right: 60px;
+  bottom: -40px;
+  width: 280px;
+  height: 425px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  z-index: 3;
+}
+@media (max-width: 1440px) {
+  .aboutMeSection {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutMeSection {
+    padding: 0;
+  }
+  .aboutMePhoto {
+    right: 10px;
+  }
+}

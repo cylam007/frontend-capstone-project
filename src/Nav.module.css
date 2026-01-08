@@ -1,3 +1,28 @@
+/* Vertical nav list for footer doormat */
+.navListVertical {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+    align-items: flex-start;
+}
+/* Footer doormat nav links */
+.footerNavLink {
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+    position: relative;
+    padding: 2px 0;
+    border-radius: 2px;
+}
+.footerNavLink:hover {
+    color: #f4ce14;
+}
 .nav {
     display: flex;
     align-items: center;

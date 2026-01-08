@@ -1,15 +1,16 @@
+import { Link } from 'react-router-dom'
 import styles from './Nav.module.css'
 
-function Nav() {
+function Nav({ vertical, footer }) {
     return (
-        <nav className={styles.nav}>
-            <ul className={styles.navList}>
-                <li><a href="/" className={styles.navLink}>Home</a></li>
-                <li><a href="/about" className={styles.navLink}>About</a></li>
-                <li><a href="/menu" className={styles.navLink}>Menu</a></li>
-                <li><a href="/reservations" className={styles.navLink}>Reservations</a></li>
-                <li><a href="/order-online" className={styles.navLink}>Order Online</a></li>
-                <li><a href="/login" className={styles.navLink}>Login</a></li>
+        <nav className={footer ? styles.footerNav : styles.nav}>
+            <ul className={vertical ? styles.navListVertical : styles.navList}>
+                <li><Link to="/" className={footer ? styles.footerNavLink : styles.navLink}>Home</Link></li>
+                <li><Link to="/about" className={footer ? styles.footerNavLink : styles.navLink}>About</Link></li>
+                <li><Link to="/menu" className={footer ? styles.footerNavLink : styles.navLink}>Menu</Link></li>
+                <li><Link to="/reservations" className={footer ? styles.footerNavLink : styles.navLink}>Reservations</Link></li>
+                <li><Link to="/order-online" className={footer ? styles.footerNavLink : styles.navLink}>Order Online</Link></li>
+                <li><Link to="/login" className={footer ? styles.footerNavLink : styles.navLink}>Login</Link></li>
             </ul>
         </nav>
     )

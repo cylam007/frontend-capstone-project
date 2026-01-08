@@ -1,0 +1,178 @@
+.chicagoSection {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1440px;
+  padding: 64px 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.chicagoImages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 32px;
+  width: 45%;
+  height: auto;
+  margin-top: -40px;
+  position: relative;
+}
+.chicagoImgA {
+  width: 380px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: translateY(40px);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chicagoImgA:hover {
+  transform: translateY(35px) scale(1.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.chicagoImgB {
+  width: 320px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: translateY(40px);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chicagoImgB:hover {
+  transform: translateY(35px) scale(1.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.chicagoText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  max-width: 600px;
+  padding: 0;
+}
+
+.chicagoTitle {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  color: #000;
+  margin: 0 0 8px 0;
+  line-height: 1.1;
+  text-align: left;
+  position: relative;
+}
+
+.chicagoSubtitle {
+  font-family: 'Markazi Text', serif;
+  font-size: 40px;
+  color: #f4ce14;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.chicagoDesc {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: #495e57;
+  margin: 12px 0 16px 0;
+  max-width: 520px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .chicagoSection {
+    padding: 40px 20px;
+  }
+  
+  .chicagoImgA {
+    width: 340px;
+    height: 260px;
+  }
+  
+  .chicagoImgB {
+    width: 200px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 900px) {
+  .chicagoSection {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    align-items: center;
+  }
+  
+  .chicagoImages {
+    width: 100%;
+    align-items: center;
+    order: 2;
+  }
+  
+  .chicagoText {
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    order: 1;
+  }
+  
+  .chicagoTitle, .chicagoSubtitle, .chicagoDesc {
+    text-align: center;
+  }
+  
+  .chicagoImgA {
+    width: 320px;
+    height: 240px;
+    transform: translateY(20px);
+  }
+  
+  .chicagoImgB {
+    width: 240px;
+    height: 200px;
+    transform: translateY(-30px) translateX(-120px);
+  }
+}
+
+@media (max-width: 700px) {
+  .chicagoSection {
+    padding: 24px 10px;
+  }
+  
+  .chicagoTitle {
+    font-size: 40px;
+  }
+  
+  .chicagoSubtitle {
+    font-size: 32px;
+  }
+  
+  .chicagoDesc {
+    font-size: 16px;
+  }
+  
+  .chicagoImgA {
+    width: 280px;
+    height: 210px;
+  }
+  
+  .chicagoImgB {
+    width: 200px;
+    height: 120px;
+    transform: translateY(-25px) translateX(-80px);
+  }
+}
