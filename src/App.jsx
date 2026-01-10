@@ -8,7 +8,7 @@ import Header from './Header.jsx'
 import Body from './Body.jsx'
 import AboutMe from './AboutMe.jsx'
 import Specials from './Specials.jsx'
-import Reservations from './pages/Reservations.jsx'
+import BookingPage from './pages/BookingPage.jsx'
 import OrderOnline from './pages/OrderOnline.jsx'
 import Login from './pages/Login.jsx'
 import Footer from './Footer.jsx'
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Body />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/menu" element={<Specials />} />
-          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/reservations" element={<BookingPage />} />
           <Route path="/order-online" element={<OrderOnline />} />
           <Route path="/login" element={<Login />} />
         </Routes>

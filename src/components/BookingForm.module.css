@@ -1,0 +1,81 @@
+.bookingForm {
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.3px;
+}
+
+.input,
+.select {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: #495e57;
+  box-shadow: 0 0 0 3px rgba(73, 94, 87, 0.1);
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.submitButton {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 24px;
+  background: #f4ce14;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submitButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(244, 206, 20, 0.4);
+}
+
+.submitButton:active {
+  transform: scale(0.98);
+}
+
+/* Responsive adjustments */
+@media (min-width: 480px) {
+  .bookingForm {
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bookingForm {
+    max-width: 400px;
+    padding: 48px 40px;
+  }
+}
