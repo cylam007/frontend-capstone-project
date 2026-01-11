@@ -1,6 +1,10 @@
-
+// Assets
 import Logo from "./assets/Logo.svg";
+
+// Components
 import Nav from "./Nav.jsx";
+
+// CSS styles
 import styles from "./Footer.module.css";
 
 

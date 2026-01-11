@@ -1,7 +1,16 @@
+// React library
 import React from "react";
+
+// React Router for navigation
 import { Link } from 'react-router-dom';
+
+// Components
 import Button from "./components/Button";
+
+// Assets
 import restaurantFood from "./assets/restauranfood.jpg";
+
+// CSS styles
 import styles from "./AboutMe.module.css";
 
 function AboutMe() {

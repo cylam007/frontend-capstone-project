@@ -1,39 +1,118 @@
-
+/* CSS Variables */
 :root {
-  --button-bg: #f4ce14;
-  --button-color: #000;
+  --button-primary-bg: #f4ce14;
+  --button-primary-color: #000;
+  --button-primary-hover: #ffe066;
+  --button-secondary-bg: #495e57;
+  --button-secondary-color: #fff;
+  --button-secondary-hover: #3d4e48;
   --button-radius: 16px;
-  --button-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  --button-shadow-hover: 0 4px 16px rgba(0,0,0,0.18);
+  --button-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  --button-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.18);
+  --button-transition: all 0.2s cubic-bezier(0.4, 1.4, 0.6, 1);
 }
 
+/* Base Button Styles */
 .button {
-  background: var(--button-bg);
-  color: var(--button-color);
-  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 2px solid transparent;
   border-radius: var(--button-radius);
-  cursor: pointer;
+  font-family: inherit;
   font-size: 1rem;
   font-weight: 500;
-  transition: 
-    background 0.2s cubic-bezier(.4,1.4,.6,1),
-    color 0.2s cubic-bezier(.4,1.4,.6,1),
-    box-shadow 0.2s cubic-bezier(.4,1.4,.6,1),
-    transform 0.2s cubic-bezier(.4,1.4,.6,1);
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--button-transition);
   box-shadow: var(--button-shadow);
+}
+
+/* Focus is when an element receives keyboard focus */
+/* Remove default focus outline, add custom one */
+.button:focus {
   outline: none;
 }
 
-.button:hover,
 .button:focus-visible {
-  transform: scale(1.08);
-  box-shadow: var(--button-shadow-hover);
-  background: linear-gradient(90deg, #ffe066 0%, #f4ce14 100%);
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
-.button:active {
+/* Variants */
+.button--primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-color);
+}
+
+.button--primary:hover:not(:disabled) {
+  background: linear-gradient(90deg, var(--button-primary-hover) 0%, var(--button-primary-bg) 100%);
+  transform: scale(1.05);
+  box-shadow: var(--button-shadow-hover);
+}
+
+.button--secondary {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-color);
+}
+
+.button--secondary:hover:not(:disabled) {
+  background: var(--button-secondary-hover);
+  transform: scale(1.05);
+  box-shadow: var(--button-shadow-hover);
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--button-primary-bg);
+  border-color: var(--button-primary-bg);
+  box-shadow: none;
+}
+
+.button--outline:hover:not(:disabled) {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-color);
+  transform: scale(1.05);
+  box-shadow: var(--button-shadow);
+}
+
+/* Ghost is a transparent button with no shadow */
+.button--ghost {
+  background: transparent;
+  color: var(--button-primary-color);
+  box-shadow: none;
+}
+
+.button--ghost:hover:not(:disabled) {
+  background: rgba(244, 206, 20, 0.1);
+  transform: scale(1.05);
+}
+
+/* Sizes */
+.button--small {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+.button--medium {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.button--large {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+}
+
+/* States */
+.button:active:not(:disabled) {
   transform: scale(0.98);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 .button:disabled {
@@ -41,4 +120,31 @@
   cursor: not-allowed;
   box-shadow: none;
   filter: grayscale(0.2);
+  transform: none;
+}
+
+/* Loading state (optional, for future use) */
+.button--loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.button--loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: button-spin 0.6s linear infinite;
+}
+
+@keyframes button-spin {
+  to { transform: rotate(360deg); }
 }

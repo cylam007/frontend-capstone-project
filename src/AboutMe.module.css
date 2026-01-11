@@ -1,5 +1,6 @@
 
 .aboutMeSection {
+  /* Overlay effect of photo */
   position: relative;
   width: 100%;
   max-width: 1440px;
@@ -10,9 +11,11 @@
   align-items: center;
   justify-content: space-between;
   background: #495e57;
+  /* For overlay effect of photo */
   overflow: visible;
   box-sizing: border-box;
-  scroll-margin-top: 80px; /* For smooth scrolling with fixed header */
+  /* For smooth scrolling with fixed header, prevent header overlap */
+  scroll-margin-top: 80px; 
 }
 
 /* Semantic wrapper for image */
@@ -20,12 +23,6 @@
   margin: 0;
 }
 
-/* Focus states for accessibility */
-.aboutMeBox:focus-within {
-  outline: 2px solid #f4ce14;
-  outline-offset: 4px;
-  border-radius: 4px;
-}
 @media (max-width: 900px) {
   .aboutMeSection {
     flex-direction: column;
@@ -60,6 +57,7 @@
   justify-content: center;
   align-items: flex-start;
   max-width: 600px;
+  /* Stacking order of elements that overlap, higher means on top */
   z-index: 2;
 }
 
@@ -96,6 +94,7 @@
   bottom: -40px;
   width: 280px;
   height: 425px;
+  /* Preserve original aspect ratio */
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);

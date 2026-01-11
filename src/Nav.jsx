@@ -1,4 +1,7 @@
+// React Router
 import { Link } from 'react-router-dom'
+
+// CSS styles
 import styles from './Nav.module.css'
 
 function Nav({ vertical, footer }) {

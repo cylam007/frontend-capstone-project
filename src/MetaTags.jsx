@@ -1,4 +1,7 @@
+// SEO library to manage document head
 import { Helmet } from 'react-helmet-async';
+
+// Assets
 import LittleLemonLogo from '../src/assets/Logo.png'
 
 const MetaTags = () => {

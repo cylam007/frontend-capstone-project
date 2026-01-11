@@ -1,41 +1,56 @@
-
+// React library
 import React from "react";
+
+// PropTypes for type checking
 import PropTypes from "prop-types";
+
+// CSS styles
 import "./Button.Component.css";
 
 const Button = ({ 
-    w = "200px", h = "40px", 
-    background_color = "#f4ce14", font_color = "#000000",
-    word = "Click Me", 
+    variant = "primary",
+    size = "medium",
+    children,
+    word,
+    disabled = false,
+    type = "button",
+    ariaLabel,
+    className = "",
     ...rest 
 }) => {
+  // Support both 'word' (legacy) and 'children' props
+  const buttonText = children || word || "Click Me";
+  
+  // Build class names
+  const buttonClasses = [
+    "button",
+    `button--${variant}`,
+    `button--${size}`,
+    className
+  ].filter(Boolean).join(" ");
+  
   return (
     <button
-      className="button"
-      style={{
-        width: w,
-        height: h,
-        backgroundColor: background_color,
-        color: font_color,
-        border: "none",
-        borderRadius: "16px",
-        cursor: "pointer",
-        fontSize: "1rem",
-        fontWeight: 500,
-        transition: "background 0.2s"
-      }}
+      type={type}
+      className={buttonClasses}
+      aria-label={ariaLabel || (typeof buttonText === 'string' ? buttonText : undefined)}
+      disabled={disabled}
       {...rest}
     >
-      {word}
+      {buttonText}
     </button>
   );
 };
 
 Button.propTypes = {
-  w: PropTypes.string,
-  h: PropTypes.string,
-  color: PropTypes.string,
-  word: PropTypes.string
+  variant: PropTypes.oneOf(["primary", "secondary", "outline", "ghost"]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
+  children: PropTypes.node,
+  word: PropTypes.string,
+  disabled: PropTypes.bool,
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
+  ariaLabel: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default Button;

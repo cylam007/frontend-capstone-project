@@ -1,6 +1,13 @@
+// React library and hooks
 import React, { useState } from 'react'
+
+// React Router for navigation
 import { Link } from 'react-router-dom'
+
+// Components
 import Button from '../components/Button.jsx'
+
+// CSS styles
 import styles from './Login.module.css'
 
 function Login() {
@@ -101,21 +108,6 @@ function Login() {
             />
           </div>
         </form>
-
-        <div className={styles.divider}>
-          <span className={styles.dividerText}>or</span>
-        </div>
-
-        <div className={styles.socialLogin}>
-          <button className={styles.socialButton} type="button">
-            <span className={styles.socialIcon}>G</span>
-            Continue with Google
-          </button>
-          <button className={styles.socialButton} type="button">
-            <span className={styles.socialIcon}>f</span>
-            Continue with Facebook
-          </button>
-        </div>
 
         <footer className={styles.footer}>
           <p className={styles.toggleText}>

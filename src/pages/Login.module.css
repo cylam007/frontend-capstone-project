@@ -43,11 +43,11 @@
 }
 
 .form {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .formGroup {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .label {
@@ -84,7 +84,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .checkboxLabel {
@@ -120,7 +120,7 @@
 }
 
 .buttonContainer {
-  margin-bottom: 24px;
+  margin-top: 8px;
 }
 
 .divider {

@@ -1,3 +1,4 @@
+// Page section components
 import AboutMe from "./AboutMe";
 import Specials from "./Specials";
 import Testimonials from "./Testimonials";

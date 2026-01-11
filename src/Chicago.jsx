@@ -1,7 +1,11 @@
-
+// React library
 import React from "react";
+
+// Assets
 import marioAdrianA from "./assets/Mario and Adrian A.jpg";
 import marioAdrianB from "./assets/Mario and Adrian B.jpg";
+
+// CSS styles
 import styles from "./Chicago.module.css";
 
 

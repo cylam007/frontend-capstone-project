@@ -8,6 +8,7 @@
 
 .specialsHeader {
   display: grid;
+  /* First column takes all available space, second column (button) take the auto width */
   grid-template-columns: 1fr auto;
   align-items: center;
   margin-bottom: 32px;
@@ -25,7 +26,7 @@
 .specialsCards {
   display: flex;
   gap: 32px;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .specialsCard {

@@ -1,5 +1,10 @@
+// React library and hooks
 import React, { useState } from 'react'
+
+// Components
 import Button from '../components/Button.jsx'
+
+// CSS styles
 import styles from './OrderOnline.module.css'
 
 function OrderOnline() {
@@ -115,6 +120,7 @@ function OrderOnline() {
                       <button 
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
                         className={styles.quantityBtn}
+                        aria-label="On Click"
                       >
                         -
                       </button>
@@ -122,6 +128,7 @@ function OrderOnline() {
                       <button 
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
                         className={styles.quantityBtn}
+                        aria-label="On Click"
                       >
                         +
                       </button>
@@ -138,9 +145,10 @@ function OrderOnline() {
                 <h3 className={styles.formTitle}>Delivery Information</h3>
                 
                 <div className={styles.formGroup}>
-                  <label className={styles.label}>Full Name *</label>
+                  <label htmlFor="customer-name" className={styles.label}>Full Name *</label>
                   <input
                     type="text"
+                    id="customer-name"
                     name="name"
                     value={customerInfo.name}
                     onChange={handleCustomerChange}
@@ -150,9 +158,10 @@ function OrderOnline() {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label className={styles.label}>Email *</label>
+                  <label htmlFor="customer-email" className={styles.label}>Email *</label>
                   <input
                     type="email"
+                    id="customer-email"
                     name="email"
                     value={customerInfo.email}
                     onChange={handleCustomerChange}
@@ -162,9 +171,10 @@ function OrderOnline() {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label className={styles.label}>Phone *</label>
+                  <label htmlFor="customer-phone" className={styles.label}>Phone *</label>
                   <input
                     type="tel"
+                    id="customer-phone"
                     name="phone"
                     value={customerInfo.phone}
                     onChange={handleCustomerChange}
@@ -174,9 +184,10 @@ function OrderOnline() {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label className={styles.label}>Address *</label>
+                  <label htmlFor="customer-address" className={styles.label}>Address *</label>
                   <input
                     type="text"
+                    id="customer-address"
                     name="address"
                     value={customerInfo.address}
                     onChange={handleCustomerChange}
@@ -187,9 +198,10 @@ function OrderOnline() {
 
                 <div className={styles.formRow}>
                   <div className={styles.formGroup}>
-                    <label className={styles.label}>City *</label>
+                    <label htmlFor="customer-city" className={styles.label}>City *</label>
                     <input
                       type="text"
+                      id="customer-city"
                       name="city"
                       value={customerInfo.city}
                       onChange={handleCustomerChange}
@@ -199,9 +211,10 @@ function OrderOnline() {
                   </div>
                   
                   <div className={styles.formGroup}>
-                    <label className={styles.label}>Zip Code *</label>
+                    <label htmlFor="customer-zipcode" className={styles.label}>Zip Code *</label>
                     <input
                       type="text"
+                      id="customer-zipcode"
                       name="zipCode"
                       value={customerInfo.zipCode}
                       onChange={handleCustomerChange}

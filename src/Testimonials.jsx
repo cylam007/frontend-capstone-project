@@ -1,6 +1,10 @@
-
+// React library
 import React from "react";
+
+// Assets
 import human from "./assets/human.png";
+
+// CSS styles
 import styles from "./Testimonials.module.css";
 
 
